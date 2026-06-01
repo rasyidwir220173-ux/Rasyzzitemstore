@@ -1,1 +1,100 @@
-# Rasyzzitemstore
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rasyzz Store - Produk Digital</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0a0a0f;color:#fff;padding:20px;min-height:100vh}
+
+.container{max-width:600px;margin:0 auto}
+
+/* HEADER LOGO KECIL 4.5rem */
+.header{display:flex;align-items:center;gap:10px;margin-bottom:30px;padding-bottom:15px;border-bottom:2px solid #1e293b}
+.logo{width:4.5rem;height:4.5rem;border-radius:12px;object-fit:cover;border:2px solid #3b82f6;box-shadow:0 0 15px rgba(59,130,246,0.4)}
+.brand{font-size:22px;font-weight:700}
+.brand .biru{color:#3b82f6;text-shadow:0 0 10px rgba(59,130,246,0.6)}
+.brand .merah{color:#ef4444;text-shadow:0 0 10px rgba(239,68,68,0.6)}
+.tagline{font-size:11px;color:#94a3b8;margin-top:2px}
+
+/* GRID PRODUK + ANIMASI */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.card{background:linear-gradient(135deg,#1e293b 0%,#0f172a 100%);border:1px solid #334155;padding:15px;border-radius:14px;text-align:center;position:relative;overflow:hidden;animation:float 3s ease-in-out infinite}
+.card:nth-child(2){animation-delay:0.5s}
+.card:nth-child(3){animation-delay:1s}
+.card:nth-child(4){animation-delay:1.5s}
+
+@keyframes float{
+0%,100%{transform:translateY(0);box-shadow:0 0 15px rgba(59,130,246,0.2)}
+50%{transform:translateY(-5px);box-shadow:0 0 25px rgba(239,68,68,0.3)}
+}
+
+/* GLOW BIRU MERAH PAS HOVER */
+.card::before{content:'';position:absolute;top:-2px;left:-2px;right:-2px;bottom:-2px;background:linear-gradient(45deg,#3b82f6,#ef4444,#3b82f6);border-radius:14px;z-index:-1;opacity:0;transition:0.3s}
+.card:hover::before{opacity:0.7}
+
+.card h3{font-size:14px;margin-bottom:6px;color:#e2e8f0}
+.card p{font-size:13px;color:#94a3b8;margin-bottom:10px}
+.btn{width:100%;padding:8px;background:linear-gradient(90deg,#3b82f6 0%,#ef4444 100%);color:#fff;border:none;border-radius:8px;font-weight:bold;font-size:12px;cursor:pointer}
+.btn:active{transform:scale(0.95)}
+
+footer{text-align:center;color:#64748b;font-size:12px;margin-top:40px}
+@media(max-width:400px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- HEADER LOGO + NAMA -->
+<div class="header">
+<img src="attachment://0" class="logo" alt="Rasyzz Store">
+<div>
+<div class="brand"><span class="biru">Rasyzz</span> <span class="merah">Store</span></div>
+<div class="tagline">Solusi cepat buat kamu</div>
+</div>
+</div>
+
+<!-- TEMPAT LETAK BARANG/PRODUK DIGITAL -->
+<div class="grid">
+<div class="card">
+<h3>Akun FF Sultan</h3>
+<p>Rank Master + Skin Banyak</p>
+<button class="btn">Lihat Detail</button>
+</div>
+
+<div class="card">
+<h3>Voucher Game</h3>
+<p>ML, PUBG, Genshin, dll</p>
+<button class="btn">Lihat Detail</button>
+</div>
+
+<div class="card">
+<h3>Jasa Joki Rank</h3>
+<p>Naik Rank Cepat & Aman</p>
+<button class="btn">Lihat Detail</button>
+</div>
+
+<div class="card">
+<h3>Top Up All Game</h3>
+<p>FF, ML, HOK, CODM</p>
+<button class="btn">Lihat Detail</button>
+</div>
+
+<div class="card">
+<h3>Item Rare FF</h3>
+<p>Bundle, Skin, Emote</p>
+<button class="btn">Lihat Detail</button>
+</div>
+
+<div class="card">
+<h3>Akun Premium</h3>
+<p>Netflix, Spotify, YT</p>
+<button class="btn">Lihat Detail</button>
+</div>
+</div>
+
+<footer>© 2026 Rasyzz Store | Produk Digital Terpercaya</footer>
+</div>
+</body>
+</html>
